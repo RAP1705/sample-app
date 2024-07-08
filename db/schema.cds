@@ -15,4 +15,17 @@ entity Authors : cuid {
     name: String;
     placeofbirth : String;
     
+};
+
+entity Orders : cuid {
+    partner : String (10);
+    items : composition of many OrderItems on items.parent = $self;
+
+};
+
+entity OrderItems  {
+    key parent: association to Orders;
+    key pos : Integer;
+    quantity : Integer;
+    
 }

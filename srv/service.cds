@@ -4,5 +4,6 @@ service BookService {
 
 entity Books as projection on raoul.Books;
 entity Authorss as projection on raoul.Authors;
+entity Orders as projection on raoul.Orders
 
 }
